@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "8OHjePcDyoRfqmDrxWPmmT",
+    "name" : "TEST1",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "created for resh - project level repo - GIT\n",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-09-27T06:45:55.098Z",
+  "objectRefs" : [ ]
+}
