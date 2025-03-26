@@ -1,46 +1,43 @@
 {
   "objectInfo" : {
-    "id" : "0ZHureGAYZCfahRYJ5fMk6",
-    "name" : "m_HP_ora",
-    "type" : "DTEMPLATE",
+    "id" : "1kKCRigN7Q1bmRHNHOb5e6",
+    "name" : "Tf_Haripriya_cmd_task_1",
+    "type" : "TASKFLOW",
     "metadata" : {
       "modelVersion" : {
-        "major" : 0,
+        "major" : 1,
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01CJ8C1700000000000G"
+        "repoHandle" : "EBX9cjIw8jIw8jI-gt-306437-2025-03-26T08:26:40.484Z::tf.xml"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "version 1",
-        "contentType" : "JSON",
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
         "documentState" : "VALID"
       }
     }
   },
-  "dataFileExtension" : "zip",
-  "updateTime" : "2025-03-26T08:54:26.178Z",
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-03-26T08:54:26.177Z",
   "objectRefs" : [ {
-    "id" : "76fb8qJavo2h9wE9kptA0H",
-    "name" : "Oracle_varsb_Sandy",
-    "type" : "Connection",
+    "id" : "3J5LYcEgBiujvMfiUEjaSE",
+    "name" : "san_vm",
+    "type" : "AgentGroup",
     "metadata" : {
       "modelVersion" : {
         "major" : 0,
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "01CJ8C0B000000000002"
+        "repoHandle" : "01CJ8C25000000000002"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : null,
         "contentType" : "JSON",
-        "documentState" : "COMPLETE"
+        "documentState" : "VALID"
       }
     },
     "path" : "/SYS"
