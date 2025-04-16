@@ -13,8 +13,11 @@
       <types1:CreatedBy>Sandy_usw5_SO</types1:CreatedBy>
       <types1:CreationDate>2025-03-26T08:26:40Z</types1:CreationDate>
       <types1:ModifiedBy>Sandy_usw5_SO</types1:ModifiedBy>
-      <types1:ModificationDate>2025-03-26T08:51:31Z</types1:ModificationDate>
-      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:ModificationDate>2025-04-16T11:55:54Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>Sandy_usw5_SO</types1:PublishedBy>
+      <types1:PublicationDate>2025-04-16T11:55:59Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.Tf_Haripriya_cmd_task_1/Tf_Haripriya_cmd_task_1.tf.xml</types1:PublishedContributionId>
       <types1:Entry>
          <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
                    xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
@@ -28,11 +31,11 @@
             <tags/>
             <generator>Informatica Process Designer 11</generator>
             <tempFields>
-               <field description="" name="CMD_TSK_LATEST" type="reference">
+               <field description="" name="Data Task 1" type="reference">
                   <options>
-                     <option name="referenceTo">$po:INFA-commandTask</option>
                      <option name="failOnNotRun">false</option>
                      <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-HP-ora-5adAO7dMAP5kVQPCYPWlCY</option>
                   </options>
                </field>
             </tempFields>
@@ -46,60 +49,70 @@
             </extData>
             <flow id="a">
                <start id="b">
-                  <link id="lhai96pv" targetId="lhai96r5"/>
+                  <link id="m9jvjyqo" targetId="m9jvjyrb"/>
                </start>
-               <eventContainer id="lhai96r5">
-                  <service id="lhai96pu">
-                     <title>CMD_TSK_LATEST</title>
-                     <serviceName>ICSExecuteCommandTask</serviceName>
+               <eventContainer id="m9jvjyrb">
+                  <service id="m9jvjyqn">
+                     <title>Data Task 1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
                      <serviceGUID/>
                      <serviceInput>
-                        <parameter name="Task Name" source="constant">CMD_TSK_LATEST</parameter>
-                        <parameter name="Wait for Task to Complete" source="constant">true</parameter>
-                        <parameter name="Runtime Environment" source="constant">01CJ8C25000000000002:san_vm</parameter>
-                        <parameter name="Max Wait" source="constant">400</parameter>
-                        <parameter name="Script Name" source="constant"/>
-                        <parameter name="Input Arguments" source="constant"/>
-                        <parameter name="Work Directory" source="constant"/>
-                        <parameter name="RuntimeEnvGUID" source="constant">3J5LYcEgBiujvMfiUEjaSE</parameter>
-                        <parameter name="FailTaskIfAnyScriptFails" source="constant">false</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_HP_ora</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">5adAO7dMAP5kVQPCYPWlCY</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
                         <parameter name="taskField" source="nested">
-                           <operation source="field" to="INFA-commandTask">temp.Command Task 1</operation>
-                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/name">Script1</operation>
-                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/scriptName">/root/Downloads/Sample_script.bat</operation>
-                           <operation source="formula" to="INFA-commandTask/input[1]/script-1/inputArguments">
-                              <expression language="XQuery">"$PMSourceFileDir","$PMSourceFileDir"</expression>
-                           </operation>
-                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/workDir"/>
+                           <operation source="field" to="mt-HP-ora-5adAO7dMAP5kVQPCYPWlCY">temp.Data Task 1</operation>
                         </parameter>
                      </serviceInput>
                      <serviceOutput>
-                        <operation source="field" to="temp.CMD_TSK_LATEST/output/Run_Id">Run Id</operation>
-                        <operation source="field" to="temp.CMD_TSK_LATEST/output/Start_Time">Start Time</operation>
-                        <operation source="field" to="temp.CMD_TSK_LATEST/output/End_Time">End Time</operation>
-                        <operation source="field" to="temp.CMD_TSK_LATEST/output/Exit_Code">Exit Code</operation>
-                        <operation source="field" to="temp.CMD_TSK_LATEST/output/Execution_Status">Execution Status</operation>
-                        <operation source="field" to="temp.CMD_TSK_LATEST/output/Std_Error">Std Error</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Data Task 1/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Data Task 1/output/FirstErrorCode">First Error Code</operation>
                      </serviceOutput>
                   </service>
-                  <link id="lhai96pw" targetId="c"/>
+                  <link id="m9jvjyqp" targetId="c"/>
                   <events>
-                     <catch faultField="temp.CMD_TSK_LATEST/fault"
-                            id="lhai96r4"
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="m9jvjyr9"
                             interrupting="true"
-                            name="error"/>
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="m9jvjyra"
+                            interrupting="true"
+                            name="warning"/>
                   </events>
                </eventContainer>
                <end id="c"/>
             </flow>
             <dependencies>
                <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
-                              displayName="INFA-commandTask"
+                              displayName="mt-HP-ora-5adAO7dMAP5kVQPCYPWlCY"
                               isByCopy="true"
-                              name="INFA-commandTask">
-                  <description>This process object represents a taskflow specific command task output field details.</description>
+                              name="mt-HP-ora-5adAO7dMAP5kVQPCYPWlCY">
+                  <description/>
                   <tags/>
                   <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
                      <field label="Output Parameters"
                             name="output"
                             nullable="true"
@@ -110,6 +123,11 @@
                             nullable="true"
                             required="false"
                             type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
                   </detail>
                </processObject>
             </dependencies>
@@ -118,5 +136,5 @@
       <types1:GUID>1kKCRigN7Q1bmRHNHOb5e6</types1:GUID>
       <types1:DisplayName>Tf_Haripriya_cmd_task_1</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2025-03-26T08:54:25.716Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2025-04-16T16:33:18.678Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
